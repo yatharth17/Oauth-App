@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header'
+import Home from "./components/Home"
+import Profile from './components/Profile'
+import {BrowserRouter,Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to my MERN app</h1>
-      <a href="/auth/google">Sign Up with Google</a>
-    </div>
+    <BrowserRouter>
+      <Header/>
+      <Route exact path="/" component={Home}></Route>
+      <Route path="/profile" component={Profile}></Route>
+    </BrowserRouter>
   );
 }
 
