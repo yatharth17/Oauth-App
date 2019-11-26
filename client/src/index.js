@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore,combineReducers,compose,applyMiddleware} from 'react'
+import {createStore,combineReducers,compose,applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
+import {authReducer} from './reducers/authReducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
